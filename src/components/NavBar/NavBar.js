@@ -6,8 +6,11 @@ function NavBar () {
     return (
       <div className="navbar">
         <h1>
-           Natural 
+           NatUraL
         </h1>
+      <div className="subtitle">
+        <h2> Beauty &  Skin Care </h2>
+      </div>
         <CartWidget/>
         
         <div id ="sectionsNav"> 

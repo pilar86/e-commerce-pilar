@@ -1,9 +1,10 @@
 import React from 'react';
 import Item from "../Productos/Item";
+import "./itemList.css";
 
 function ItemList(props) {
     return (
-        <div>
+        <div className = "cards-container">
             {props.data.map((item) => {
 
             return (
@@ -17,7 +18,7 @@ function ItemList(props) {
             );
             })}
         </div>
-    )
+    );
 }
 
 export default ItemList;

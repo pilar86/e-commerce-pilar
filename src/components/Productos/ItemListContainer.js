@@ -13,7 +13,7 @@ function ItemListContainer(props) {
                 ()=>{
                 getItems().then((respDatos)=>{
                 setData (respDatos);
-                console.log("data recibida",  data);
+                console.log("data recibida", data);
                 });
     },[]);
     
