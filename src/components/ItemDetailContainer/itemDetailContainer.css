@@ -1,0 +1,15 @@
+.main-container{
+    display: flexbox;
+}
+
+
+
+h3 {
+    font-family: 'Quicksand', sans-serif;
+    font-size: 25px;
+    letter-spacing: 2px;
+}
+
+img{
+    width: 500px;
+}

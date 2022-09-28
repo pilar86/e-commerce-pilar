@@ -1,0 +1,37 @@
+.navbar {
+    background-image: "assets/productos/img/soap9.jpg",
+ }
+
+ h1{  
+    font-family: 'Cinzel Decorative', cursive;
+    color: rgba(5, 27, 1, 0.761);
+    font-size: 70px;
+    margin-bottom: 0;
+    letter-spacing: 4px;
+}
+
+h2{
+    font-family: 'Cinzel Decorative', cursive;
+    color: rgba(2, 15, 1, 0.591);
+    font-size: 30px;
+    margin-top: 0;
+    letter-spacing: 3px;
+}
+
+#sectionsNav ul {
+    list-style: none;
+    padding: 0;
+    flex-wrap: wrap;
+}
+
+#sectionsNav ul li{
+    display: inline-block;
+}
+
+#sectionsNav ul li {
+    padding: 12px;
+    text-decoration: none;
+    color: rgba(2, 15, 1, 0.672);
+    font-size: 30px;
+    letter-spacing: 2px;
+}

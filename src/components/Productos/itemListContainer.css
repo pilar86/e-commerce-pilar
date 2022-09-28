@@ -1,0 +1,9 @@
+.main-container{
+    
+    align-items: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap:2rem;
+    flex-wrap: wrap;
+}
