@@ -211,11 +211,11 @@ export function getSingleItem(idItem) {
     });
 }
 
-export function getItemsByCategory (categoria) {
+export function getItemsByCategory (category) {
     return new Promise ((resolve, reject) => {
 
         let itemFind = data.filter((item) => {
-            return item.category === categoria;
+            return item.category === category;
         });
         setTimeout ( ()=> {
             if (itemFind) resolve (itemFind);

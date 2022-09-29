@@ -17,15 +17,15 @@ function ItemListContainer() {
             });
 },[]);
 
-    const { categoria } = useParams ();
+    const { category } = useParams ();
 
     useEffect(()=>{
-        if (categoria === undefined) {
+        if (category === undefined) {
             getItems().then((respDatos)=> setData(respDatos));
         } else {
-            getItemsByCategory(categoria).then((respDatos) => setData (respDatos));
+            getItemsByCategory(category).then((respDatos) => setData (respDatos));
         }
-    }, [categoria]);
+    }, [category]);
 
     return (
         <div>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 
 function Item(props) {
-    let { img, title, price, id } = props;
+    let { img, title, price, id, category } = props;
     /* Hooks*/
     const urlDetalle = `/body/${props.id}`;
 

@@ -20,8 +20,8 @@ function NavBar () {
 
                 <li><Link to="/home">Home</Link></li>
                 <li><Link to="/category/cosmetics">Cosmetics</Link></li>
-                <li><Link to="category/hair">Hair</Link></li>
-                <li><Link to="category/body">Body</Link></li>
+                <li><Link to="/category/hair">Hair</Link></li>
+                <li><Link to="/category/body">Body</Link></li>
                     
               </ul>
             </div>

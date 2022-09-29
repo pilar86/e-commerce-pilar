@@ -15,7 +15,7 @@ function App() {
       <Routes> 
         <Route path="/" element={<ItemListContainer greeting = " Beauty & Skin Care"/>}/>
         <Route path="/home" element={<ItemListContainer/>}/>
-        <Route path="/categoria/:category" element={<ItemListContainer/>}/>
+        <Route path="/category/:category" element={<ItemListContainer/>}/>
         <Route path="/body/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<h7>404: producto no encontado</h7>}/>
       </Routes>

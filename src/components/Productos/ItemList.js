@@ -16,6 +16,7 @@ function ItemList(props) {
                     title={item.title}
                     detail={item.detail}
                     price={item.price}
+                    category={item.category}
                 />
             );
             })}
