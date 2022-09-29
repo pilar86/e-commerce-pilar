@@ -39,7 +39,7 @@ const data = [
         id: 5,
         title:"Bálsamo Labial 05",
         price: 1600,
-        stock:16,
+        stock:12,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/lips6.jpg",
@@ -48,7 +48,7 @@ const data = [
         id: 6,
         title:"Bálsamo Labial 06",
         price: 1600,
-        stock:100,
+        stock:12,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/lips7.jpg",
@@ -57,7 +57,7 @@ const data = [
         id: 7,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:19,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil1.jpg",
@@ -66,7 +66,7 @@ const data = [
         id: 8,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:15,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil2.jpg",
@@ -75,7 +75,7 @@ const data = [
         id: 9,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:15,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil3.jpg",
@@ -84,7 +84,7 @@ const data = [
         id: 10,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:15,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil4.jpg",
@@ -93,7 +93,7 @@ const data = [
         id: 11,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:8,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil5.jpg",
@@ -102,7 +102,7 @@ const data = [
         id: 12,
         title:"Esencia Aromaterapia",
         price: 950,
-        stock:80,
+        stock:8,
         category: "cosmetics",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/oil6.jpg",
@@ -111,7 +111,7 @@ const data = [
         id: 13,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:10,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap1.jpg",
@@ -120,7 +120,7 @@ const data = [
         id: 14,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:6,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap2.jpg",
@@ -129,7 +129,7 @@ const data = [
         id: 15,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:10,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap3.jpg",
@@ -138,7 +138,7 @@ const data = [
         id: 16,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:12,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap4.jpg",
@@ -147,7 +147,7 @@ const data = [
         id: 17,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:12,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap5.jpg",
@@ -156,7 +156,7 @@ const data = [
         id: 18,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:8,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap6.jpg",
@@ -165,7 +165,7 @@ const data = [
         id: 19,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:9,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap7.jpg",
@@ -174,7 +174,7 @@ const data = [
         id: 20,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:9,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap8.jpg",
@@ -183,7 +183,7 @@ const data = [
         id: 21,
         title:"jabón corporal",
         price: 600,
-        stock:100,
+        stock:10,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap9.jpg",
@@ -199,13 +199,31 @@ export default function getItems(){
     });
 }
 
-export function getSingleItem() {
+export function getSingleItem(idItem) {
     return new Promise ((resolve, reject)=> {
-        setTimeout(()=> {
-            resolve (data[1]);
-        },1500);
-    })
+        let itemFind = data.find((item) => {
+            console.log("find", item.id, idItem);
+            return item.id === parseInt(idItem);
+        });
+
+        if (itemFind) resolve(itemFind);
+        else reject(new Error("producto no encontrado"));
+    });
 }
+
+export function getItemsByCategory (categoria) {
+    return new Promise ((resolve, reject) => {
+
+        let itemFind = data.filter((item) => {
+            return item.category === categoria;
+        });
+        setTimeout ( ()=> {
+            if (itemFind) resolve (itemFind);
+            else reject(new Error ("producto no encontrado"));
+        },1200)
+        });
+    }
+
 
 /* SIMULANDO una conexion a una BASE de DATOS (simular 1 demora en devolver los datos utilizando 1promesa xq es algo asíncrono)
 
@@ -213,4 +231,12 @@ export function getSingleItem() {
 
 -y no ir a cambiar c/u de los componentes 
 - resolve y reject - No son palabrasreservadas.
+
+export function getSingleItem() {
+    return new Promise ((resolve, reject)=> {
+        setTimeout(()=> {
+            resolve (data[12]);
+        },1100);
+    })
+}
 */ 

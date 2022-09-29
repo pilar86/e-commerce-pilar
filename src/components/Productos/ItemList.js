@@ -2,6 +2,7 @@ import React from 'react';
 import Item from "../Productos/Item";
 import "./itemList.css";
 
+
 function ItemList(props) {
     return (
         <div className = "cards-container">
@@ -10,6 +11,7 @@ function ItemList(props) {
             return (
                 <Item
                     key={item.id}
+                    id={item.id}
                     img={item.img}
                     title={item.title}
                     detail={item.detail}
@@ -18,7 +20,7 @@ function ItemList(props) {
             );
             })}
         </div>
-    );
+    )
 }
 
 export default ItemList;
