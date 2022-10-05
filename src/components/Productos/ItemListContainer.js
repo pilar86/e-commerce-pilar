@@ -1,7 +1,5 @@
 import {useState, useEffect} from 'react';
 import "./itemListContainer.css";
-
-
 import ItemList from "../../components/Productos/ItemList";
 import { useParams } from "react-router-dom";
 import getItems, { getItemsByCategory } from '../../services/mockAPI';

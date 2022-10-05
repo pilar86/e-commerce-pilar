@@ -28,4 +28,5 @@ button{
     letter-spacing: 5px;
     border-top-left-radius: 15px; 
     border-bottom-right-radius: 15px;
+    cursor: pointer;
 }

@@ -15,7 +15,7 @@ function App() {
         <Route path="/home" element={<ItemListContainer/>}/>
         <Route path="/category/:category" element={<ItemListContainer/>}/>
         <Route path="/body/:id" element={<ItemDetailContainer/>}/>
-        <Route path="*" element={<h7>"Producto no Encontado"</h7>}/>
+        <Route path="*" element={<h6>"Producto no Encontado"</h6>}/>
       </Routes>
       
       <Footer/>

@@ -1,19 +1,21 @@
-import React, {useState} from "react";
+import React from 'react';
+import {useState} from "react";
 import "./itemCount.css";
+//import Button from "../Button/Button";
 
 //desafio onAddToCart
 
-function ItemCount ({stock, initial, onAddToCart}) {
+function ItemCount  ({stock, initial, onAddToCart})  {
     const [count, setCount] = useState(initial);
     
 
     const handleAdd = () => {
         setCount(count + 1);   
-    };
+    }
 
     const handleSubstract = () => {
         setCount(count - 1);
-     };
+     }
     
 
     return (
@@ -28,8 +30,10 @@ function ItemCount ({stock, initial, onAddToCart}) {
             <div className="btnAddToCart">
                 
                 <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>
+            
             </div>
-
+                
+        
         </div>
     );
 }
@@ -52,6 +56,9 @@ export default ItemCount;
             </div>
         </div>
     );
-} */
+} 
+
+ <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>
+*/
 
 

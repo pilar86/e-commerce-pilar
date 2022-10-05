@@ -3,9 +3,9 @@ import ItemCount from "../ItemCount/ItemCount";
 
 
 function ItemDetail({ data }) {
-
-    function handleAddToCart(){
-        alert(`agregaste al carrito`);
+    
+    function handleAddToCart(count) {
+    alert(`Agregaste al carrito ${count} productos.`);
     } 
 
     return (
