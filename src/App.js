@@ -1,4 +1,5 @@
 import './App.css';
+import Cart from "./components/Cart/Cart";
 import NavBar from "./components/NavBar/NavBar";
 import ItemListContainer from "./components/Productos/ItemListContainer";
 import ItemDetailContainer from "./components/ItemDetailContainer/ItemDetailContainer";
@@ -16,6 +17,8 @@ function App() {
         <Route path="/category/:category" element={<ItemListContainer/>}/>
         <Route path="/body/:id" element={<ItemDetailContainer/>}/>
         <Route path="*" element={<h6>"Producto no Encontado"</h6>}/>
+
+        <Route path="/cart" element={<Cart/>} />
       </Routes>
       
       <Footer/>
