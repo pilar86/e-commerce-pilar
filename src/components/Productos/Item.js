@@ -4,14 +4,11 @@ import { Link } from "react-router-dom";
 
 
 function Item(props) {
-    let { img, title, price, id, category } = props;
-    /* Hooks*/
+    let { img, title, price } = props;
+    
     const urlDetalle = `/body/${props.id}`;
 
-    const onAdd = (quantity) => {
-    console.log(quantity)
-    }
-
+    
     return(
         <div className="card">
             <div className="card-img">
@@ -19,11 +16,12 @@ function Item(props) {
             </div>
             <div className="card-detail">
                 <h3>{title}</h3>
-                <h4>${price}</h4>
-            </div>
+                <h3>${price}</h3>
+            
             <Link to={urlDetalle}> 
                 <button className= "ver-mas">Ver Más</button>
             </Link> 
+            </div>
         </div>         
     );
 }

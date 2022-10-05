@@ -1,7 +1,7 @@
 const data = [
     {
         id: 1,
-        title:"Bálsamo Labial 01",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:10,
         category: "cosmetics",
@@ -10,7 +10,7 @@ const data = [
     },
     {
         id: 2,
-        title:"Bálsamo Labial 02",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:12,
         category: "cosmetics",
@@ -19,7 +19,7 @@ const data = [
     },
     {
         id: 3,
-        title:"Bálsamo Labial 03",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:8,
         category: "cosmetics",
@@ -28,7 +28,7 @@ const data = [
     },
     {
         id: 4,
-        title:"Bálsamo Labial 04",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:15,
         category: "cosmetics",
@@ -37,7 +37,7 @@ const data = [
     },
     {
         id: 5,
-        title:"Bálsamo Labial 05",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:12,
         category: "cosmetics",
@@ -46,7 +46,7 @@ const data = [
     },
     {
         id: 6,
-        title:"Bálsamo Labial 06",
+        title:"Bálsamo Labial",
         price: 1600,
         stock:12,
         category: "cosmetics",
@@ -109,25 +109,17 @@ const data = [
     },
     {
         id: 13,
-        title:"jabón corporal",
+        title:"Jabón corporal",
         price: 600,
         stock:10,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap1.jpg",
     },
+    
     {
         id: 14,
-        title:"jabón corporal",
-        price: 600,
-        stock:6,
-        category: "body",
-        detail: "producto 100% origen vegetal",
-        img: "/assets/productos/img/soap2.jpg",
-    },
-    {
-        id: 15,
-        title:"jabón corporal",
+        title:"Jabón corporal",
         price: 600,
         stock:10,
         category: "body",
@@ -135,8 +127,8 @@ const data = [
         img: "/assets/productos/img/soap3.jpg",
     },
     {
-        id: 16,
-        title:"jabón corporal",
+        id: 15,
+        title:"Jabón corporal",
         price: 600,
         stock:12,
         category: "body",
@@ -144,35 +136,18 @@ const data = [
         img: "/assets/productos/img/soap4.jpg",
     },
     {
-        id: 17,
-        title:"jabón corporal",
+        id: 16,
+        title:"Jabón corporal",
         price: 600,
         stock:12,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap5.jpg",
     },
+   
     {
-        id: 18,
-        title:"jabón corporal",
-        price: 600,
-        stock:8,
-        category: "body",
-        detail: "producto 100% origen vegetal",
-        img: "/assets/productos/img/soap6.jpg",
-    },
-    {
-        id: 19,
-        title:"jabón corporal",
-        price: 600,
-        stock:9,
-        category: "body",
-        detail: "producto 100% origen vegetal",
-        img: "/assets/productos/img/soap7.jpg",
-    },
-    {
-        id: 20,
-        title:"jabón corporal",
+        id: 17,
+        title:"Jabón corporal",
         price: 600,
         stock:9,
         category: "body",
@@ -180,14 +155,69 @@ const data = [
         img: "/assets/productos/img/soap8.jpg",
     },
     {
-        id: 21,
-        title:"jabón corporal",
+        id: 18,
+        title:"Jabón corporal",
         price: 600,
         stock:10,
         category: "body",
         detail: "producto 100% origen vegetal",
         img: "/assets/productos/img/soap9.jpg",
     },
+    {
+        id: 19,
+        title:"Shampoo y Crema",
+        price: 1470,
+        stock:13,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair1.jpg",
+    },
+    {
+        id: 20,
+        title:"Tintura",
+        price: 2300,
+        stock:17,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair2.jpg",
+    },
+    {
+        id: 21,
+        title:"aceite reparador",
+        price: 1890,
+        stock:12,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair3.jpg",
+    },
+    {
+        id: 22,
+        title:"Shampo",
+        price: 1200,
+        stock:9,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair4.jpg",
+    },
+    {
+        id: 23,
+        title:"loción para Peinar",
+        price: 1600,
+        stock:11,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair6.jpg",
+    },
+    {
+        id: 24,
+        title:"Kit Reparación",
+        price: 2800,
+        stock:23,
+        category: "hair",
+        detail: "producto 100% origen vegetal",
+        img: "/assets/productos/img/hair5.jpg",
+    },
+    
 
 ]
 
@@ -195,7 +225,7 @@ export default function getItems(){
     return new Promise ((resolve, reject) => {
         setTimeout( ()=>{
             resolve(data)
-        },1500)
+        },1300)
     });
 }
 
@@ -206,8 +236,10 @@ export function getSingleItem(idItem) {
             return item.id === parseInt(idItem);
         });
 
+    setTimeout ( ()=> {
         if (itemFind) resolve(itemFind);
         else reject(new Error("producto no encontrado"));
+    },1500)
     });
 }
 
@@ -219,7 +251,7 @@ export function getItemsByCategory (category) {
         });
         setTimeout ( ()=> {
             if (itemFind) resolve (itemFind);
-            else reject(new Error ("producto no encontrado"));
+            else reject(new Error("producto no encontrado"));
         },1200)
         });
     }

@@ -1,8 +1,9 @@
 import React, {useState} from "react";
 import "./itemCount.css";
 
+//desafio onAddToCart
 
-function ItemCount({stock, initial, onAdd}) {
+function ItemCount ({stock, initial, onAddToCart}) {
     const [count, setCount] = useState(initial);
     
 
@@ -25,7 +26,8 @@ function ItemCount({stock, initial, onAdd}) {
             <button disabled = {count <= 1} onClick={handleSubstract}>-</button>
 
             <div className="btnAddToCart">
-                <button disabled = {stock <=0} onClick={() =>onAdd (count)}>Agregar al Carrito</button>{""}
+                
+                <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>
             </div>
 
         </div>

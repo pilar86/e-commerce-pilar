@@ -1,6 +1,7 @@
-import React, {useState, useEffect} from 'react';
+import {useState, useEffect} from 'react';
 import "./itemListContainer.css";
-/*import getItems from "../../services/mockAPI";*/
+
+
 import ItemList from "../../components/Productos/ItemList";
 import { useParams } from "react-router-dom";
 import getItems, { getItemsByCategory } from '../../services/mockAPI';
@@ -9,16 +10,9 @@ import getItems, { getItemsByCategory } from '../../services/mockAPI';
 function ItemListContainer() {
 
         let [data, setData] = useState([]);
-        useEffect(
-            ()=>{
-            getItems().then((respDatos)=>{
-            setData (respDatos);
-            console.log("data recibida",  data);
-            });
-},[]);
+        const { category } = useParams ();
 
-    const { category } = useParams ();
-
+    
     useEffect(()=>{
         if (category === undefined) {
             getItems().then((respDatos)=> setData(respDatos));
@@ -30,7 +24,7 @@ function ItemListContainer() {
     return (
         <div>
             <div className="main container">
-                <ItemList data = {data}/>  
+                <ItemList data={data}/>  
                 </div>
             </div>
     );
@@ -38,15 +32,6 @@ function ItemListContainer() {
 
 export default ItemListContainer;
 
-
-    /*useEffect(
-                ()=>{
-                getItems().then((respDatos)=>{
-                setData (respDatos);
-                console.log("data recibida", data);
-                });
-            },[]);
-            */
     
     
     

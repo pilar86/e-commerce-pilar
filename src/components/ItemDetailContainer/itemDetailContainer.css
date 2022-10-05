@@ -6,7 +6,8 @@
     margin:2rem;
 }
 
-h3 {
+h4 {
+    margin: 8px;
     font-family: 'Josefin Sans', sans-serif;
     color:  rgb(137, 120, 108);
     font-size: 30px;
@@ -19,8 +20,12 @@ img{
 
 button{
     margin:15px;
+    padding: 15px;
     background-image: url("/public/assets/productos/img/backg3.jpg");
     color:rgb(255, 253, 248);
     font-family: 'Josefin Sans', sans-serif;
     font-size: 22px;
+    letter-spacing: 5px;
+    border-top-left-radius: 15px; 
+    border-bottom-right-radius: 15px;
 }

@@ -7,18 +7,10 @@
     
         
     width: 100%;
-    margin: 0;
-    margin-top: 1rem;
-    margin-bottom: 5rem;
-    
-    padding-top :100px;
-    padding-bottom: 100px;
-    row-gap: 6rem;
-    column-gap: 6rem;
-    background-color: rgba(255, 255, 255, 0.962);
+    padding-top :120px;
+    padding-bottom: 120px;
+    row-gap: 7rem;
+    column-gap: 7rem;
+    background-color: rgba(206, 160, 127, 0.123);
 }
 
-button{
-    background-color:rgba(84, 45, 16, 0.09);
-    color:  rgb(253, 250, 249);
-}
