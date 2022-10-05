@@ -16,7 +16,7 @@ function ItemCount  ({stock, initial, onAddToCart})  {
     const handleSubstract = () => {
         setCount(count - 1);
      }
-    
+     
 
     return (
         <div className="counter">
@@ -27,12 +27,9 @@ function ItemCount  ({stock, initial, onAddToCart})  {
 
             <button disabled = {count <= 1} onClick={handleSubstract}>-</button>
 
-            <div className="btnAddToCart">
-                
-                <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>
-            
-            </div>
-                
+            <div className="btnAddToCart">          
+                <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>        
+            </div>         
         
         </div>
     );

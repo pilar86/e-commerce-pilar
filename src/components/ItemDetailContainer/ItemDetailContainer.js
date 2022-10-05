@@ -6,6 +6,10 @@ import { useParams } from "react-router-dom";
 
 
 function ItemDetailContainer() {
+   
+    function handleAddToCart(count){
+        alert(`Agregaste al carrito ${count} productos.`);
+    }
 
     let [data, setData] = useState({});
     const  id = useParams().id;
@@ -22,7 +26,7 @@ function ItemDetailContainer() {
                 <h4>{data.title}</h4>
                 <h4>{data.detail}</h4>
                 <h4>${data.price}</h4>            
-                <ItemCount initial={1} stock={data.stock}/>              
+                <ItemCount initial={1} stock={data.stock} onAddToCart={handleAddToCart}/>              
             </div>
     );
 }
