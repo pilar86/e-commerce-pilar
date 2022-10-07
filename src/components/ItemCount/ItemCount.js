@@ -1,41 +1,38 @@
 import React from 'react';
-import {useState} from "react";
 import "./itemCount.css";
-//import Button from "../Button/Button";
 
-//desafio onAddToCart
 
-function ItemCount  ({stock, initial, onAddToCart})  {
-    const [count, setCount] = useState(initial);
+export default function ItemCount({ stock, onAddToCart, qantty, setQantty })  {
+    
+    const handleAdd = () => {
+        setQantty( qantty + 1);   
+    }
     
 
-    const handleAdd = () => {
-        setCount(count + 1);   
-    }
-
     const handleSubstract = () => {
-        setCount(count - 1);
+        setQantty(qantty - 1);
      }
+    
      
 
     return (
         <div className="counter">
 
-            <button disabled= {count >= stock} onClick={handleAdd}>+</button>
+            <button disabled= {qantty >= stock} onClick={handleAdd}>+</button>
 
-            <span>{count}</span>
+            <span>{qantty}</span>
 
-            <button disabled = {count <= 1} onClick={handleSubstract}>-</button>
+            <button disabled = {qantty <= 1} onClick={handleSubstract}>-</button>
 
             <div className="btnAddToCart">          
-                <button onClick={() => onAddToCart(count)}>Agregar al Carrito</button>        
+                <button onClick={() => onAddToCart()}>Agregar al Carrito</button>        
             </div>         
         
         </div>
     );
 }
 
-export default ItemCount;
+
 
 
 

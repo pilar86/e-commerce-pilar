@@ -229,20 +229,6 @@ export default function getItems(){
     });
 }
 
-export function getSingleItem(idItem) {
-    return new Promise ((resolve, reject)=> {
-        let itemFind = data.find((item) => {
-            console.log("find", item.id, idItem);
-            return item.id === parseInt(idItem);
-        });
-
-    setTimeout ( ()=> {
-        if (itemFind) resolve(itemFind);
-        else reject(new Error("producto no encontrado"));
-    },1500)
-    });
-}
-
 export function getItemsByCategory (category) {
     return new Promise ((resolve, reject) => {
 
@@ -255,6 +241,22 @@ export function getItemsByCategory (category) {
         },1200)
         });
     }
+
+
+export function getSingleItem(idItem) {
+    return new Promise ((resolve, reject)=> {
+        let itemFind = data.find((item) => {
+            console.log("find", item.id, idItem);
+            return item.id === parseInt(idItem);
+        });
+    setTimeout ( ()=> {
+        if (itemFind) resolve(itemFind);
+        else reject(new Error("producto no encontrado"));
+    },1500)
+    });
+}
+
+
 
 
 /* SIMULANDO una conexion a una BASE de DATOS (simular 1 demora en devolver los datos utilizando 1promesa xq es algo asíncrono)
