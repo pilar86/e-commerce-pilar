@@ -1,16 +1,24 @@
 .card{
+    background-image: linear-gradient(to bottom, #e2d0c4 50%, #fff6ef  80%, #ddcbbb  100%);
+    transition: 0.5s;
     margin: 0px; 
     width: 360px;
     height: 100%;
     border-radius: 15px;
     
     box-shadow: 0px 0px 30px rgba(114, 109, 105, 0.736);
-    background-color: white;
+    
     overflow: hidden;
     transition:  all 0.10s ease-in;
     cursor: pointer;
-    background-image: url("/public/assets/productos/img/backg3.jpg");
+   
 }
+
+.card:hover {
+    background-position: right center;
+    color: #fff;
+    text-decoration: none;
+  }
 
 .card-img{
     width: 360px;
@@ -31,30 +39,45 @@
     margin-top: 19px;
     margin-bottom: 19px;
     padding:3px;
-    background-color: rgba(37, 36, 35, 0.424);
+    
     border-bottom-left-radius: 9px;
     border-bottom-right-radius: 9px;
 }
 
 button.ver-mas {
-    padding:12px;
+    background-image: linear-gradient(to right, #4d8c3bba 0%, #061700e7  51%, #50a439d7  100%);
+    padding: 18px 25px;
     margin: 6px;
+    background-size: 200% auto;
+    
     font-family: 'Josefin Sans', sans-serif;
-    font-size: 18px;
+    font-size: 16px;
     font-weight: bold;
+    text-transform: uppercase;
+    transition: 0.5s;
     letter-spacing: 6px;
     border-top-left-radius: 25px;
     border-bottom-right-radius: 25px;
-    border-color: rgba(240, 237, 235, 0.494);
-    box-shadow: 0px 0px 18px rgb(242, 240, 239);
+    
     cursor: pointer;
+}         
+
+button.ver-mas:hover {
+    background-position: right center; 
+    color: #fff;
+    text-decoration: none;
 }
+     
+
 .card h3 {
     margin: 8px;
     padding: 2px;
-    font-family: 'Josefin Sans', sans-serif;
     font-family: 'Poiret One', cursive;
-    font-size: 22px;
-    color:  rgb(249, 248, 248);
-    letter-spacing: 8px;
+    font-size: 24px;
+    color:  rgb(121, 84, 55);
+    letter-spacing: 4px;
 }
+
+ 
+          
+ 
